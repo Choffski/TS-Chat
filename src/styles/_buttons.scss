@@ -1,0 +1,27 @@
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
+.btn-yellow {
+  background: $yellow;
+
+  &:hover{
+    background: darken($yellow, 5%);
+  }
+  &:active, :focus{
+    background: darken($yellow, 10%);
+     outline: none !important;
+      }
+}
+.btn-dgrey {
+  background: $darkgrey;
+
+  &:hover{
+    background: darken($darkgrey, 5%);
+  }
+  &:active, :focus{
+    background: darken($darkgrey, 10%);
+     outline: none !important;
+      }
+}

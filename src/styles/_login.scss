@@ -1,0 +1,94 @@
+
+.Login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: $purple;
+  color: white;
+}
+.login-jumbotron{
+  width: 80%;
+  align-self: center;
+  background: transparent;
+}
+
+.login-form-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+
+
+  & label{
+    padding-left: 20px;
+    align-self: center;
+    max-width: 20%;
+    width: 20%;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  &--input-wrapper{
+    min-width: 70%;
+    width: 70%;
+
+  & input {
+    margin-left: 10%;
+    width: 100%;
+    color: $darkgrey !important;
+  }
+  }
+}
+
+.form-horinzontal legend  {
+text-align: center;
+}
+
+.login-form-buttonbar{
+width: 100%;
+display: flex;
+padding: 0px 3% 10px 10%;
+justify-content: flex-end;
+
+& button {
+  margin-left: 5px;
+}
+& span {
+  cursor: pointer;
+
+  &:active {
+    color: lighten(white, 5%);
+  }
+}
+}
+
+//// override styles ////
+
+
+
+
+
+
+@media (max-width: $phone-width){
+  .login-jumbotron{
+    width: 100%;
+  }
+}
+
+@media (min-width: $phone-width) and (max-width: $tablet-width - 1px) {
+  .login-jumbotron{
+    width: 85%;
+  }
+}
+
+@media (min-width: $tablet-width ) and (max-width: $desktop-width -1px){
+
+}
+
+@media (min-width: $desktop-width){
+  .login-jumbotron{
+    width: 50%;
+  }
+}
