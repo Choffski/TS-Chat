@@ -5,6 +5,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require("react");
+var FormGroup_1 = require("./FormGroup");
 var SignupForm = (function (_super) {
     __extends(SignupForm, _super);
     function SignupForm() {
@@ -15,22 +16,10 @@ var SignupForm = (function (_super) {
         return (React.createElement("form", { className: "form-horinzontal login-form" },
             React.createElement("fieldset", null,
                 React.createElement("legend", null, " Sign Up "),
-                React.createElement("div", { className: "login-form-group" },
-                    React.createElement("label", { htmlFor: "inputEmail", className: "control-label" }, "Email"),
-                    React.createElement("div", { className: "login-form-group--input-wrapper" },
-                        React.createElement("input", { required: true, type: "text", className: "form-control", id: "inputEmail", placeholder: "Enter Email.." }))),
-                React.createElement("div", { className: "login-form-group" },
-                    React.createElement("label", { htmlFor: "inputUsername", className: "control-label" }, "Username"),
-                    React.createElement("div", { className: "login-form-group--input-wrapper" },
-                        React.createElement("input", { required: true, type: "text", className: "form-control", id: "inputUsername", placeholder: "Select Username, this can be changed later.." }))),
-                React.createElement("div", { className: "login-form-group" },
-                    React.createElement("label", { htmlFor: "inputPassword", className: "control-label" }, "Password"),
-                    React.createElement("div", { className: "login-form-group--input-wrapper" },
-                        React.createElement("input", { required: true, type: "password", className: "form-control", id: "inputPassword", placeholder: "Select Password.." }))),
-                React.createElement("div", { className: "login-form-group" },
-                    React.createElement("label", { htmlFor: "reinputPassword", className: "control-label" }, "Re-enter Password"),
-                    React.createElement("div", { className: "login-form-group--input-wrapper" },
-                        React.createElement("input", { required: true, type: "password", className: "form-control", id: "reinputPassword", placeholder: "Re-enter Password.." })))),
+                React.createElement(FormGroup_1.default, { name: "inputEmail", required: "true", label: "Email", placeholder: "Enter Email..", type: "text" }),
+                React.createElement(FormGroup_1.default, { name: "inputUsername", required: "true", label: "Username", placeholder: "Select Username (can be changed)", type: "text" }),
+                React.createElement(FormGroup_1.default, { name: "inputPassword", required: "true", label: "Password", placeholder: "Enter Password..", type: "password" }),
+                React.createElement(FormGroup_1.default, { name: "reinputPassword", required: "true", label: "Re-enter password", placeholder: "Re-enter Password..", type: "password" })),
             React.createElement("div", { className: "login-form-buttonbar" },
                 React.createElement("button", { href: "#", onClick: function () { return _this.props.handleShowForm(); }, className: "btn btn-dgrey" }, " Back "),
                 React.createElement("button", { type: "submit", className: " btn btn-yellow" }, "Sign up"))));

@@ -7,6 +7,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var React = require("react");
 var LoginForm_1 = require("./LoginForm");
 var SignupForm_1 = require("./SignupForm");
+var react_bootstrap_1 = require("react-bootstrap");
 var Login = (function (_super) {
     __extends(Login, _super);
     function Login() {
@@ -22,7 +23,7 @@ var Login = (function (_super) {
     }
     Login.prototype.render = function () {
         return (React.createElement("div", { className: "Login" },
-            React.createElement("div", { className: "jumbotron login-jumbotron" }, this.state.showSignup ?
+            React.createElement(react_bootstrap_1.Jumbotron, { className: "login-jumbotron" }, this.state.showSignup ?
                 React.createElement(SignupForm_1.default, { handleShowForm: this._showSignup.bind(this) })
                 :
                     React.createElement(LoginForm_1.default, { handleShowForm: this._showSignup.bind(this) }))));

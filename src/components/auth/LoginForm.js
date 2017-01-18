@@ -5,6 +5,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require("react");
+var FormGroup_1 = require("./FormGroup");
 var LoginForm = (function (_super) {
     __extends(LoginForm, _super);
     function LoginForm() {
@@ -15,14 +16,8 @@ var LoginForm = (function (_super) {
         return (React.createElement("form", { className: "form-horinzontal login-form" },
             React.createElement("fieldset", null,
                 React.createElement("legend", null, " Login "),
-                React.createElement("div", { className: "login-form-group" },
-                    React.createElement("label", { htmlFor: "inputUsername", className: "control-label" }, "Username"),
-                    React.createElement("div", { className: "login-form-group--input-wrapper" },
-                        React.createElement("input", { required: true, type: "text", className: "form-control", id: "inputUsername", placeholder: "Enter Username.." }))),
-                React.createElement("div", { className: "login-form-group" },
-                    React.createElement("label", { htmlFor: "inputPassword", className: "control-label" }, "Password"),
-                    React.createElement("div", { className: "login-form-group--input-wrapper" },
-                        React.createElement("input", { required: true, type: "password", className: "form-control", id: "inputPassword", placeholder: "Enter Password.." })))),
+                React.createElement(FormGroup_1.default, { required: "true", type: "text", name: "inputUserName", placeholder: "Enter Username..", label: "Username" }),
+                React.createElement(FormGroup_1.default, { required: "true", type: "password", name: "inputPassword", placeholder: "Enter Password..", label: "Password" })),
             React.createElement("div", { className: "login-form-buttonbar" },
                 React.createElement("button", { type: "submit", className: "btn btn-yellow" }, "Login")),
             React.createElement("div", { className: "login-form-buttonbar" },

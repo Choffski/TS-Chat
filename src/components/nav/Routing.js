@@ -7,7 +7,6 @@ var __extends = (this && this.__extends) || function (d, b) {
 var React = require("react");
 var react_router_1 = require("react-router");
 var Login_1 = require("../auth/Login");
-var Signup_1 = require("../auth/Signup");
 var AppContainer_1 = require("../main/AppContainer");
 var Routing = (function (_super) {
     __extends(Routing, _super);
@@ -17,7 +16,6 @@ var Routing = (function (_super) {
     Routing.prototype.render = function () {
         return (React.createElement(react_router_1.Router, { history: react_router_1.hashHistory },
             React.createElement(react_router_1.Route, { path: "/login", component: Login_1.default }, " "),
-            React.createElement(react_router_1.Route, { path: "/signup", component: Signup_1.default }, " "),
             React.createElement(react_router_1.Route, { path: "/main", component: AppContainer_1.default }),
             React.createElement(react_router_1.Redirect, { from: "/", to: "/login" })));
     };

@@ -3,6 +3,7 @@ import { LoginState } from "./authInterface.d";
 
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
+import { Jumbotron } from "react-bootstrap";
 
 class Login extends React.Component <any, LoginState> {
 
@@ -23,15 +24,16 @@ class Login extends React.Component <any, LoginState> {
   }
 
   render() {
+
     return(
       <div className="Login">
-          <div className="jumbotron login-jumbotron">
+          <Jumbotron className="login-jumbotron">
             {this.state.showSignup ?
               <SignupForm handleShowForm={this._showSignup.bind(this)} />
               :
               <LoginForm handleShowForm={this._showSignup.bind(this)} />
             }
-          </div>
+          </Jumbotron>
       </div>
     );
   };

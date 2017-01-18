@@ -1,4 +1,6 @@
 import * as React from "react";
+import FormGroup from "./FormGroup";
+
 
 class SignupForm extends React.Component <any, any> {
   render() {
@@ -6,30 +8,15 @@ class SignupForm extends React.Component <any, any> {
       <form className="form-horinzontal login-form">
         <fieldset>
           <legend> Sign Up </legend>
-          <div className="login-form-group">
-            <label htmlFor="inputEmail" className="control-label">Email</label>
-            <div className="login-form-group--input-wrapper">
-                <input required={true}  type="text" className="form-control" id="inputEmail" placeholder="Enter Email.." />
-            </div>
-          </div>
-          <div className="login-form-group">
-            <label htmlFor="inputUsername" className="control-label">Username</label>
-            <div className="login-form-group--input-wrapper">
-                <input required={true}  type="text" className="form-control" id="inputUsername" placeholder="Select Username, this can be changed later.." />
-            </div>
-          </div>
-          <div className="login-form-group">
-            <label htmlFor="inputPassword" className="control-label">Password</label>
-            <div className="login-form-group--input-wrapper">
-                <input required={true}  type="password" className="form-control" id="inputPassword" placeholder="Select Password.." />
-            </div>
-          </div>
-          <div className="login-form-group">
-            <label htmlFor="reinputPassword" className="control-label">Re-enter Password</label>
-            <div className="login-form-group--input-wrapper">
-                <input required={true} type="password" className="form-control" id="reinputPassword" placeholder="Re-enter Password.." />
-            </div>
-          </div>
+
+          <FormGroup name="inputEmail" required="true" label="Email" placeholder="Enter Email.." type="text">
+          </FormGroup>
+          <FormGroup name="inputUsername" required="true" label="Username" placeholder="Select Username (can be changed)" type="text">
+          </FormGroup>
+          <FormGroup name="inputPassword" required="true" label="Password" placeholder="Enter Password.." type="password">
+          </FormGroup>
+          <FormGroup name="reinputPassword" required="true" label="Re-enter password" placeholder="Re-enter Password.." type="password">
+          </FormGroup>
        </fieldset>
         <div className="login-form-buttonbar">
           <button href="#" onClick={() => this.props.handleShowForm()} className="btn btn-dgrey"> Back </button>
