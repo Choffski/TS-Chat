@@ -13,11 +13,11 @@ var LoginForm = (function (_super) {
     }
     LoginForm.prototype.render = function () {
         var _this = this;
-        return (React.createElement("form", { className: "form-horinzontal login-form" },
+        return (React.createElement("form", { onSubmit: this.props.handleSubmit.bind(this, event), className: "form-horinzontal login-form" },
             React.createElement("fieldset", null,
                 React.createElement("legend", null, " Login "),
-                React.createElement(FormGroup_1.default, { required: "true", type: "text", name: "inputUserName", placeholder: "Enter Username..", label: "Username" }),
-                React.createElement(FormGroup_1.default, { required: "true", type: "password", name: "inputPassword", placeholder: "Enter Password..", label: "Password" })),
+                React.createElement(FormGroup_1.default, { required: "true", type: "text", name: "inputUsername", placeholder: "Enter Username..", label: "Username", value: this.props.username, handleChange: this.props.handleChange.bind(this) }),
+                React.createElement(FormGroup_1.default, { required: "true", type: "password", name: "inputPassword", placeholder: "Enter Password..", label: "Password", value: this.props.password, handleChange: this.props.handleChange })),
             React.createElement("div", { className: "login-form-buttonbar" },
                 React.createElement("button", { type: "submit", className: "btn btn-yellow" }, "Login")),
             React.createElement("div", { className: "login-form-buttonbar" },

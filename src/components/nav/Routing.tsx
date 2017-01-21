@@ -12,9 +12,7 @@ render() {
       <Router history={hashHistory} >
         <Route path="/login" component={Login}> </Route>
         <Route path="/main" component={Main}>
-
         </Route>
-
         <Redirect from="/" to="/login"/>
       </Router>
   );

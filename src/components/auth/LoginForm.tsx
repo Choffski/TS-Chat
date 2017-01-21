@@ -7,15 +7,17 @@ class LoginForm extends React.Component <LoginFormProps, any> {
 
 render() {
       return(
-          <form className="form-horinzontal login-form">
+          <form onSubmit={this.props.handleSubmit.bind(this,event)} className="form-horinzontal login-form">
             <fieldset>
               <legend> Login </legend>
               <FormGroup
               required="true"
               type="text"
-              name="inputUserName"
+              name="inputUsername"
               placeholder="Enter Username.."
-              label="Username">
+              label="Username"
+              value={this.props.username}
+              handleChange={this.props.handleChange.bind(this)}>
               </FormGroup>
 
               <FormGroup
@@ -23,7 +25,9 @@ render() {
               type="password"
               name="inputPassword"
               placeholder="Enter Password.."
-              label="Password">
+              label="Password"
+              value={this.props.password}
+              handleChange={this.props.handleChange}>
               </FormGroup>
            </fieldset>
            <div className="login-form-buttonbar">
